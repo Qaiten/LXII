@@ -1,5 +1,5 @@
 class CfgPatches {
-    class MyArsenalWhitelistMod {
+    class arsenalWhitelist {
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.0;
@@ -10,14 +10,14 @@ class CfgPatches {
 class CfgFunctions {
     class ArsenalWhitelist {
         class functions {
-            file = "\MyArsenalWhitelistMod\functions";
+            file = "\LXII\addons\arsenalWhitelist\functions";  // Correct path based on your folder structure
             class whitelistInit {};
             class attachWhitelist {};
         };
     };
     class Zeus {
         class functions {
-            file = "\MyArsenalWhitelistMod\zeus";
+            file = "\LXII\addons\arsenalWhitelist\zeus";  // Correct path for Zeus functions
             class spawnCrate {};
         };
     };
