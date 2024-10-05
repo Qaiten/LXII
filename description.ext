@@ -1,0 +1,44 @@
+class CfgFunctions {
+    class MyMod {
+        class Functions {
+            file = "functions";
+            class whitelistInit {};
+            class whitelistModule {};
+            class attachWhitelist {};
+        };
+    };
+};
+
+class CfgVehicles {
+    class Logic;
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {
+            class Units;
+        };
+        class ModuleDescription {
+            class AnyBrain;
+        };
+    };
+
+    class MyMod_WhitelistModule: Module_F {
+        scope = 2;
+        displayName = "Whitelist Supply Box";
+        icon = "\a3\Modules_F_Curator\Data\iconSupplyDrop_ca.paa";
+        category = "Curator";
+        function = "arsenalWhitelist_fnc_whitelistModule";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        curatorCanAttach = 1;
+
+        class Arguments: ArgumentsBaseUnits {
+            class Units: Units {};
+        };
+
+        class ModuleDescription: ModuleDescription {
+            description = "Place a supply box and select a whitelist.";
+            sync[] = {"AnyBrain"};
+        };
+    };
+};

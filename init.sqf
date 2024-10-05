@@ -1,0 +1,1 @@
+[] execVM "arsenalWhitelist\functions\fn_whitelistInit.sqf";
