@@ -33,32 +33,32 @@ class CfgZeus {
             scope = 2;
         };
     };
+};
     
-    class Modules {
-        class MyMod_WhitelistModule {  // Add this block
-            scope = 2;
-            displayName = "Whitelist Supply Box";
-            icon = "\a3\Modules_F_Curator\Data\iconSupplyDrop_ca.paa";
-            category = "Legio_XII";  // Ensure this matches your category
-            function = "Zeus_fnc_whitelistModule";
-            functionPriority = 1;
-            isGlobal = 1;
-            isTriggerActivated = 0;
-            isDisposable = 0;
-            curatorCanAttach = 1;
+class Modules {
+    class MyMod_WhitelistModule {  // Add this block
+        scope = 2;
+        displayName = "Whitelist Supply Box";
+        icon = "\a3\Modules_F_Curator\Data\iconSupplyDrop_ca.paa";
+        category = "Legio_XII";  // Ensure this matches your category
+        function = "Zeus_fnc_whitelistModule";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        curatorCanAttach = 1;
 
-            class Arguments {
-                class Units {
-                    displayName = "Units";
-                    description = "Units to sync with the module.";
-                    typeName = "ARRAY";
-                };
+        class Arguments {
+            class Units {
+                displayName = "Units";
+                description = "Units to sync with the module.";
+                typeName = "ARRAY";
             };
+        };
 
-            class ModuleDescription {
-                description = "Place a supply box and select a whitelist.";
-                sync[] = {"AnyBrain"};
-            };
+        class ModuleDescription {
+            description = "Place a supply box and select a whitelist.";
+            sync[] = {"AnyBrain"};
         };
     };
 };
